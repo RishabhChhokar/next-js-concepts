@@ -4,7 +4,7 @@ const details = [
   { id: "3", name: "Suresh", role: "Frontend Developer" },
 ];
 
-function TeamMember({ params }) {
+export default function TeamMember({ params }) {
   const member = details.find((details) => details.id === params.id);
   if (!member) {
     return <h1>Developer doesn't exist</h1>;
@@ -17,5 +17,3 @@ function TeamMember({ params }) {
     </div>
   );
 }
-
-export default TeamMember;
